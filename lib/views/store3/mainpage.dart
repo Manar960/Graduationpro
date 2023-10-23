@@ -10,7 +10,6 @@ import 'package:finalpro/views/store3/beforafter.dart';
 import 'package:finalpro/views/store3/heder.dart';
 import 'package:finalpro/views/store3/srevicecard.dart';
 import 'package:finalpro/views/store3/catecury1.dart';
-import 'package:finalpro/views/stores/componants/rate.dart';
 import 'package:flutter/material.dart';
 import 'package:finalpro/views/homepage/componant/menu.dart';
 import 'package:iconly/iconly.dart';

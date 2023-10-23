@@ -1,4 +1,5 @@
 import 'package:auto_size_text/auto_size_text.dart';
+import 'package:finalpro/views/chating/chats/chatsscreen.dart';
 import 'package:flutter/material.dart';
 
 import '../../../constants.dart';
@@ -53,10 +54,10 @@ class _MobBannerState extends State<MobBanner> {
             ),
           ],
         ),
-        SizedBox(
+        const SizedBox(
           height: 30,
         ),
-        AboutSection(),
+        const AboutSection(),
       ],
     );
   }
@@ -74,25 +75,25 @@ class AboutSection extends StatelessWidget {
       children: [
         // ignore: prefer_const_constructors
         //it will adjust its size according to screeen
-        AutoSizeText(
+        const AutoSizeText(
           "خيارك الافضل لدينا",
           maxLines: 1,
           style: TextStyle(fontSize: 56, fontWeight: FontWeight.bold),
         ),
      
        
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Container(
-          padding: EdgeInsets.only(left: 10, right: 10),
+          padding: const EdgeInsets.only(left: 10, right: 10),
           height: 50,
           decoration: BoxDecoration(
             color: Colors.white,
             border: Border.all(color: Colors.grey.withOpacity(0.3)),
           ),
           child: TextFormField(
-            decoration: InputDecoration(
+            decoration: const InputDecoration(
                 suffixIcon: Icon(
                   Icons.adjust_rounded,
                   color: kSecondaryColor,
@@ -104,7 +105,7 @@ class AboutSection extends StatelessWidget {
                     UnderlineInputBorder(borderSide: BorderSide.none)),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         Row(
@@ -113,8 +114,16 @@ class AboutSection extends StatelessWidget {
               child: MaterialButton(
                 height: 55,
                 color: kSecondaryColor,
-                onPressed: () {},
-                child: Text(
+                onPressed: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => const ChatsScreen(),
+                    ),
+                  );
+                },
+
+                child: const Text(
                   "تواصل مع الخبراء",
                   style: TextStyle(
                       color: Colors.white,
